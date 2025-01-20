@@ -1,5 +1,6 @@
 body {
     font-family: "Quicksand", serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
   .quicksand-regular {
     font-family: "Quicksand", serif;
@@ -18,7 +19,119 @@ body {
   .quicksand-bold {
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
+    font-weight: semi-bold;
+    font-style: normal;
+  }       
+  
+  .quicksand-bold {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
   }       
   
+  .container {
+    max-width: 1160px;
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+    width: 100%; /* Make sure the container covers the full width of the screen */
+}
+
+.header-container {
+    max-width: 1160px;
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+    width: 100%; 
+}
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    text-align: center;
+  }
+    
+  div.logo- {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+  .school-name{
+    font-size: 32px;
+    font-weight: bold;
+    align-items: center; 
+    
+
+
+  }
+  .menu-home{
+    color: #fea301;
+    font-weight: bold;
+  }
+  .menu-about{
+    color: #01abfc;
+  }
+  .menu-faci{
+    color: #05D4DF;
+  }
+  .menu-adm{
+    color: #5D58EF;
+  }
+
+.menu-about,.menu-faci,.menu-adm{
+  font-size: 1rem;
+  font-weight: medium;
+  margin: 0 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header-btn{
+    background-color: orange;
+    padding: 10px 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: semi-bold;
+    border-radius: 12px;
+    border-width: 0px;
+}
+
+/* Hamburger icon styling */
+.hamburger-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hide by default on larger screens */
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+    /* Show the hamburger icon on mobile */
+    .hamburger-icon {
+        display: block;
+        color: black;
+    }
+    .school-name{
+     display: none;
+    }
+    nav{
+        display: none;
+    }
+    .header-btn {
+        display: none; /* Hide the header button on mobile */
+    }
+    .logo{
+        width: 80%;
+    }
+    .header-container {
+        padding: 0px 5px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid orange;
+    }
