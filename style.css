@@ -1,0 +1,24 @@
+body {
+    font-family: "Quicksand", serif;
+  }
+  .quicksand-regular {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: regular;
+    font-style: normal;
+  }   
+  
+  .quicksand-medium {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: medium;
+    font-style: normal;
+  }
+  
+  .quicksand-bold {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }       
+  
