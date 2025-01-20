@@ -2,6 +2,10 @@ body {
     font-family: "Quicksand", serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
+
+  * {
+    box-sizing: border-box;
+}
   .quicksand-regular {
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
@@ -39,7 +43,7 @@ body {
 }
 
 .header-container {
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0 auto; /* Center the content horizontally */
     display: flex;
     justify-content: space-between; /* Ensure items are spaced evenly */
@@ -54,7 +58,7 @@ body {
     text-align: center;
   }
     
-  div.logo- {
+  div.logo-with-text  {
     align-items: center;
     display: flex;
     gap: 10px;
@@ -70,6 +74,7 @@ body {
   .menu-home{
     color: #fea301;
     font-weight: bold;
+    font-size: 20px;
   }
   .menu-about{
     color: #01abfc;
@@ -82,7 +87,7 @@ body {
   }
 
 .menu-about,.menu-faci,.menu-adm{
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: medium;
   margin: 0 10px;
 }
@@ -111,6 +116,193 @@ nav ul {
     display: none; /* Hide by default on larger screens */
 }
 
+/* Banner Section */
+
+section.Banner {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    max-width: 1200px; /* Adjust the max-width as per your requirement */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Optional: Add padding if you want space inside the section */
+    width: 100%; /* Ensure the section doesn't exceed the max width */
+   
+}
+
+.banner-content {
+    margin-right: 50px;
+}
+.banner-heading {
+    font-size: 56px;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.banner-subheading {
+    font-size: 20px;
+    font-weight: regular;  
+}
+
+
+.empowering {
+    color: orange;
+}
+
+.vision {
+    color: #01acfd;
+}
+
+.primary-btn {
+    background-color: black;
+    padding: 12px 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: semi-bold;
+    border-radius: 12px;
+    border-width: 0px;
+}
+
+
+/* First Section  */
+
+/* Section Styling */
+.section-1 {
+    display: flex;
+    flex-direction: column; /* Stack heading and cards */
+    align-items: center; /* Center align all elements */
+    padding: 40px 20px; /* Add padding for spacing */
+    background: url("assets/bg-image.jpg") no-repeat center center / cover; /* Add background image */
+    position: relative;
+    text-align: center; /* Center text alignment */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 46px;
+    font-weight: bold;
+    color: #333; /* Dark color for text */
+    margin-bottom: 30px; /* Space between heading and cards */
+}
+
+/* Cards Container */
+.section-1 .cards {
+    margin-top: 40px;    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 40px; /* Space between cards */
+    width: 100%; /* Make container take full width */
+    max-width: 1200px; /* Limit the container width */
+}
+
+/* Card Common Styles */
+.card1, .card2, .card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 30px; /* Add padding inside the card */
+    border-radius: 18px; /* Rounded corners */
+    border: 2px solid; /* Common border style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Card-Specific Styles */
+.card1 {
+    background: linear-gradient(to bottom, #DEF5FF, white); /* Gradient */
+    border-color: #DEF5FF;
+}
+
+.card2 {
+    background: linear-gradient(to bottom, #FFF4DC, white); /* Gradient */
+    border-color: #FFF4DC;
+}
+
+.card3 {
+    background: linear-gradient(to bottom, #FFF3E0, white); /* Gradient */
+    border-color: #FFF3E0;
+}
+
+/* Card Content */
+.card-img img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px; /* Space below image */
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-card1, .btn-card2, .btn-card3 {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-card1:hover, .btn-card2:hover, .btn-card3:hover {
+    background-color: #ff8000; /* Darker orange on hover */
+}
+
+/* Arrow Icons */
+.arrow-icon {
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space above arrows */
+    gap: 20px; /* Space between arrows */
+}
+
+.arrow-icon img {
+    margin-top: 40px;
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.arrow-icon img:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .section-1 .cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 767px) {
+    .section-1 .cards {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+
 /* For mobile screens */
 @media (max-width: 767px) {
     /* Show the hamburger icon on mobile */
@@ -135,3 +327,41 @@ nav ul {
         padding-bottom: 20px;
         border-bottom: 1px solid orange;
     }
+
+    section.Banner {
+        flex-direction: column; /* Stack the image and content vertically */
+        text-align: center; /* Center-align the content */
+       
+    }
+
+    .banner-img {
+        order: -1; /* Move the image to the top */
+       
+    }
+
+    .banner-pic{
+        width: 100%; /* Limit the width of the image */
+        margin-bottom: 20px;
+    }
+
+    .banner-content {
+        order: 1; /* Content goes below the image */
+        width: 100%; /* Make content take full width on mobile */
+        
+    }
+
+    .banner-heading {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+
+    .banner-subheading {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .primary-btn {
+        font-size: 16px; /* Adjust button size for smaller screens */
+    }
+
+   
+}
+
