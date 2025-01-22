@@ -245,6 +245,7 @@ section.Banner {
     margin-bottom: 10px;
 }
 
+
 .card-content p {
     font-size: 16px;
     color: #555;
@@ -294,140 +295,85 @@ section.Banner {
 
 
 
- /* Our Stories */
- .our-stories-main-sec{
-    background: linear-gradient(0.00deg,
-    rgba(254, 163, 1, 0.3),
-   rgba(255, 255, 255, 0.3) 100%);
+/* Section 2 Styles */
+.section-2 {  
+    background: linear-gradient(0.00deg,rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%),url("assets/bg.png");
+    position: relative;
+    background-image: ;
+    padding: 60px 20px;
+    text-align: center;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
 }
-.our-stories-sec{
+
+
+
+.section-2 h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+.stories-card-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    gap: 15px;
     max-width: 80%;
     margin: 0 auto;
 }
 
-.our-stories-sec > h1{
-    text-align: center;
-    margin: 80px 0px 60px;
-    font-size: 45px;
-    font-weight: 700;
-}
-.our-stories-cards-container{
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-}
-.story-1{
+
+.small-card {
+    
+    background: white;
     border-radius: 16px;
-    background-color: white;
-}
-.story-1 img{
-    border-radius: 16px 16px 0px 0px;
-    width: 100%;
+    text-align: left;
 }
 
-.story-intro h3{
-    margin: 0px 0px 15px;
-    font-size: 15px;
-    font-weight: 700;
+.small-card img{
+    border-radius: 16px 16px 0 0;
 }
-.story-1 h3{
-    font-size: 24px;
-}
-.story-1 p{
-    color: rgb(102, 102, 102);
-    font-size: 15px;
-    font-weight: 500;
-}
-.story-intro{
-    padding: 24px;
-}
-.story-intro time{
-    font-size: 10px 15px;
-    font-weight: 500;
-    color: white;
-    background: rgb(60, 216, 232);
-    border-radius: 45px;
-    padding: 15px;
-}
-.multi-stories-cards-container{
+.small-card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
-.multi-story-card{  
-    border-radius: 16px;
-    background-color: white;
 
+.card img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
 }
-.multi-story-card img{
-    border-radius: 16px 16px 0px 0px;
-}
-.story-intro-date{
-    position: relative;
-    top: -45px;
-    text-align: center;
-}
-.story-2-badge time, .story-4-badge time, .story-5-badge time{
-    background-color: rgb(149, 178, 38);
-}
-.story-3-badge time{
-    background-color: rgb(93, 88, 240);
-}
-.btn-view-div{
-    text-align: center;
-    padding: 80px 0px 60px;
-}
-.btn-view-all{
-    background-color: black;
-    padding: 15px 50px;
-    border-radius: 12px;
-    color: white;
+
+/* Card Content */
+.card h3 {
+    font-size: 18px;
     font-weight: 700;
-    font-size: 20px;
-}
-/* Hidden cards */
-#story-4, #story-5{
-    display: none;
+   
+   
 }
 
-/* moving-text */
-.moving-text{
-    max-width: 500px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+.story-text h3{
+    margin: 0px 0px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+
+}
+
+.story-text h4{
+    margin: 0px 0px 15px;
     font-size: 16px;
-    text-transform: uppercase;
-}
-/* Responsiveness */
-@media screen and (max-width:576px) {
-    .our-stories-cards-container{
-        display: block;
-    }
-    .story-1{
-        display: none;
-    }
-    .our-stories-sec{
-        max-width: 90%;
-    }
-    .multi-stories-cards-container{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .multi-story-card img{
-        width: 100%;
-    }
-    .story-intro{
-        padding: 8px;
-    }
-    #story-4, #story-5{
-        display: block;
-    }
-    .btn-view-all{
-        padding: 12px 34px;
-        font-size: 15px;
-    }
+    font-weight: 700;
+
 }
 
+.story-text{
+    padding: 5px 20px;
+    line-height: 24px;
+}
 
 button.card-btn {
     display: inline-block;
@@ -513,25 +459,6 @@ button.small-card-btn-blue {
 
 
 
-/* Responsive Design */
-@media screen and (max-width: 767px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .large-card {
-       display: none;
-
-    }
-}
-
-
-/* Responsive Adjustments */
-@media (max-width: 991px) {
-    .section-1 .cards {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
-}
 
 @media (max-width: 767px) {
     .section-1 .cards {
@@ -598,44 +525,40 @@ button.small-card-btn-blue {
     .primary-btn {
         font-size: 16px; /* Adjust button size for smaller screens */
     }
-
+  
+    .large-card{
+        display: none;
+    }
+    
+    .our-stories-sec{
+        max-width: 90%;
+    }
+    .small-card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .small-card-container img{
+        width: 100%;
+    }
+    .story-text{
+        padding: 8px;
+    }
+    .small-card-btn{
+        top: -30px;
+        text-wrap: nowrap;
+    }
+    /* #story-4, #story-5{
+        display: block;
+    } */
+    .btn-view-all{
+        padding: 12px 34px;
+        font-size: 15px;
+    }
+    
    
 }
 
-.stories-card-container{
-    display: block;
-}
-.large-card{
-    display: none;
-}
-.our-stories-sec{
-    max-width: 90%;
-}
-.small-card-container{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-.small-card-container img{
-    width: 100%;
-}
-.story-text{
-    padding: 8px;
-}
-.small-card-btn{
-    top: -30px;
-    text-wrap: nowrap;
-}
-.story-intro-date time{
-    padding: 8px;
-    font-size: 14px;
-}
-/* #story-4, #story-5{
-    display: block;
-} */
-.btn-view-all{
-    padding: 12px 34px;
-    font-size: 15px;
-}
 
 
 
@@ -663,7 +586,7 @@ footer {
 
 /* Footer */
 footer{
-    padding: 20px 0px;
+    padding: 100px 0px;
     background: rgb(1, 172, 253);
 }
 .footer-container{
@@ -716,3 +639,5 @@ footer{
     .footer-container{
         max-width: 90%;
     }
+
+    
