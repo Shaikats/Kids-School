@@ -5,7 +5,13 @@ body {
 
   * {
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
+
+button {
+    font-family: inherit;
+  }
   .quicksand-regular {
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
@@ -67,13 +73,11 @@ body {
     font-size: 32px;
     font-weight: bold;
     align-items: center; 
-    
-
 
   }
   .menu-home{
     color: #fea301;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
   }
   .menu-about{
@@ -88,7 +92,7 @@ body {
 
 .menu-about,.menu-faci,.menu-adm{
   font-size: 20px;
-  font-weight: medium;
+  font-weight: 500;
   margin: 0 10px;
 }
 
@@ -103,7 +107,7 @@ nav ul {
     padding: 10px 60px;
     color: white;
     font-size: 20px;
-    font-weight: semi-bold;
+    font-weight: 600;
     border-radius: 12px;
     border-width: 0px;
 }
@@ -157,7 +161,7 @@ section.Banner {
     padding: 12px 60px;
     color: white;
     font-size: 20px;
-    font-weight: semi-bold;
+    font-weight: 600;
     border-radius: 12px;
     border-width: 0px;
 }
@@ -170,8 +174,8 @@ section.Banner {
     display: flex;
     flex-direction: column; /* Stack heading and cards */
     align-items: center; /* Center align all elements */
-    padding: 40px 20px; /* Add padding for spacing */
-    background: url("assets/bg-image.jpg") no-repeat center center / cover; /* Add background image */
+    padding: 60px 20px; /* Add padding for spacing */
+    background: url("assets/bg.png") no-repeat center center / cover; /* Add background image */
     position: relative;
     text-align: center; /* Center text alignment */
 }
@@ -181,7 +185,7 @@ section.Banner {
     font-size: 46px;
     font-weight: bold;
     color: #333; /* Dark color for text */
-    margin-bottom: 30px; /* Space between heading and cards */
+    margin-bottom: 0 auto; /* Space between heading and cards */
 }
 
 /* Cards Container */
@@ -223,8 +227,8 @@ section.Banner {
 }
 
 .card3 {
-    background: linear-gradient(to bottom, #FFF3E0, white); /* Gradient */
-    border-color: #FFF3E0;
+    background: linear-gradient(to bottom, #F2E8FF, white); /* Gradient */
+    border-color: #F2E8FF;
 }
 
 /* Card Content */
@@ -248,20 +252,24 @@ section.Banner {
 }
 
 .btn-card1, .btn-card2, .btn-card3 {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+   
 }
 
-.btn-card1:hover, .btn-card2:hover, .btn-card3:hover {
-    background-color: #ff8000; /* Darker orange on hover */
+.btn-card1 {
+    color: #64C8FF;
+    font-weight: bold;
 }
+
+.btn-card2 {
+    color: #F0AA00;
+    font-weight: bold;
+}
+
+.btn-card3 {
+    color: #8700FF;
+    font-weight: bold;
+}
+
 
 /* Arrow Icons */
 .arrow-icon {
@@ -281,12 +289,113 @@ section.Banner {
 }
 
 .arrow-icon img:hover {
-    transform: scale(1.2); /* Enlarge on hover */
+    transform: scale(1.1); /* Enlarge on hover */
 }
 
 
 
+/* Section 2 Styles */
+.section-2 {  
+    background: linear-gradient(0.00deg,rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%)!important;
+    background: url("assets/bg.png") no-repeat center center / cover; /* Add background image */
+    position: relative;
+    background-image: ;
+    padding: 60px 20px;
+    text-align: center;
+}
 
+
+.section-2 h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Card Content */
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 16px 12px 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 12px 16px;
+}
+
+.card-btn {
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: rgba(60, 216, 232, 0.9);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 45px;
+    text-decoration: none;
+}
+
+/* Large Card */
+.large-card {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Button */
+.primary-btn {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 50px;
+    border-radius: 12px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+.primary-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .large-card {
+        grid-column: span 1;
+    }
+}
 
 
 /* Responsive Adjustments */
